@@ -1,5 +1,4 @@
 import { Contact } from '@prisma/client';
-import Image from 'next/image';
 
 interface ContactCardProps {
   contact: Contact;
@@ -9,11 +8,11 @@ export default function ContactCard(props: ContactCardProps) {
   return (
     <div className="border rounded-lg p-4 flex">
       <div className="my-auto">
-        <Image
+        <img
           src={props.contact.avatar}
           alt="Avatar"
-          width={40}
-          height={40}
+          style={{width:'40px',
+          height:'40px'}}
           className="rounded-full"
         />
       </div>

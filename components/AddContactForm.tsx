@@ -11,42 +11,42 @@ interface AddContactFormProps {
 }
 
 export default function AddContactForm(props: AddContactFormProps) {
-  const { register, handleSubmit, errors } = useForm();
+  const { register, handleSubmit } = useForm();
   return (
     <form className="flex flex-col" onSubmit={handleSubmit(props.onSubmit)}>
       <InputSpacer>
         <Input
           placeholder="First Name"
           name="firstName"
-          formRef={register({ required: true })}
+          formRef={register}
         />
-        {errors.firstName && (
+        {/* {errors.firstName && (
           <FormError errorMessage="First Name is required" />
-        )}
+        )} */}
       </InputSpacer>
       <InputSpacer>
         <Input
           placeholder="Last Name"
           name="lastName"
-          formRef={register({ required: true })}
+          formRef={register}
         />
-        {errors.lastName && <FormError errorMessage="Last Name is required" />}
+        {/* {errors.lastName && <FormError errorMessage="Last Name is required" />} */}
       </InputSpacer>
       <InputSpacer>
         <Input
           placeholder="Email"
           name="email"
-          formRef={register({ required: true })}
+          formRef={register}
         />
-        {errors.email && <FormError errorMessage="Email is required" />}
+        {/* {errors.email && <FormError errorMessage="Email is required" />} */}
       </InputSpacer>
       <InputSpacer>
         <Input
           placeholder="Avatar"
           name="avatar"
-          formRef={register({ required: true })}
+          formRef={register}
         />
-        {errors.avatar && <FormError errorMessage="Avatar is required" />}
+        {/* {errors.avatar && <FormError errorMessage="Avatar is required" />} */}
       </InputSpacer>
 
       <button
